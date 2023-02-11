@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="60dp"
+    tools:context=".MainActivity">
+    
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginTop="70dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/file"/>
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shared Preferences"
+        android:textStyle="bold|italic"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/judul"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="@color/purple_200"
+        app:boxStrokeColor="@color/purple_200"
+        app:hintTextColor="@color/purple_200"
+        android:hint="Input Name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="@color/purple_200"
+        app:boxStrokeColor="@color/purple_200"
+        app:hintTextColor="@color/purple_200"
+        android:hint="Input Age"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:layout_weight="5"
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save"
+            app:layout_constraintStart_toStartOf="@+id/editAge"
+            app:layout_constraintTop_toBottomOf="@+id/editAge"/>
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/buttonRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:text="read"
+            app:layout_constraintStart_toEndOf="@+id/buttonSave"
+            app:layout_constraintTop_toTopOf="@+id/buttonSave"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn" />
+    <TextView
+        android:id="@+id/showAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

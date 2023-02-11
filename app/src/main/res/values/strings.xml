@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SharedPreferences</string>
+    <string name="input_name">Input Name</string>
+    <string name="input_age">Input Age</string>
+    <string name="save_pref">Save Pref</string>
+    <string name="read_pref">Read Pref</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+</resources>
